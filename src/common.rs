@@ -1081,7 +1081,8 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://admin.rustdesk.com".to_owned()
+    //"https://admin.rustdesk.com".to_owned()  //官方的API接口
+    "".to_owned()  //去掉API接口为空
 }
 
 #[inline]
