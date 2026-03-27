@@ -76,6 +76,7 @@ class DesktopSettingPage extends StatefulWidget {
     if (!bind.isIncomingOnly()) SettingsTabKey.display,
     if (!isWeb && !bind.isIncomingOnly() && bind.pluginFeatureIsEnabled())
       SettingsTabKey.plugin,
+    
     if (isWindows &&
         bind.mainGetBuildinOption(key: kOptionHideRemotePrinterSetting) != 'Y')
       SettingsTabKey.printer,
@@ -1649,6 +1650,76 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
     final outgoingOnly = bind.isOutgoingOnly();
 
     final divider = const Divider(height: 1, indent: 16, endIndent: 16);
+    return _Card(
+      title: 'Network',
+      children: [
+        Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (!hideProxy && !hideServer) divider,
+              if (!hideProxy)
+                listTile(
+                  icon: Icons.network_ping_outlined,
+                  title: 'Socks5/Http(s) Proxy',
+                  onTap: changeSocks5Proxy,
+                ),
+              if (!hideWebSocket && (!hideServer || !hideProxy)) divider,
+              if (!hideWebSocket)
+                switchWidget(
+                    Icons.web_asset_outlined,
+                    'Use WebSocket',
+                    '${translate('websocket_tip')}\n\n${translate('server-oss-not-support-tip')}',
+                    kOptionAllowWebSocket),
+              if (!isWeb)
+                futureBuilder(
+                  future: bind.mainIsUsingPublicServer(),
+                  hasData: (isUsingPublicServer) {
+                    if (isUsingPublicServer) {
+                      return Offstage();
+                    } else {
+                      return Column(
+                        children: [
+                          if (!hideServer || !hideProxy || !hideWebSocket)
+                            divider,
+                          switchWidget(
+                              Icons.no_encryption_outlined,
+                              'Allow insecure TLS fallback',
+                              'allow-insecure-tls-fallback-tip',
+                              kOptionAllowInsecureTLSFallback),
+                          if (!outgoingOnly) divider,
+                          if (!outgoingOnly)
+                            listTile(
+                              icon: Icons.lan_outlined,
+                              title: 'Disable UDP',
+                              showTooltip: true,
+                              tooltipMessage:
+                                  '${translate('disable-udp-tip')}\n\n${translate('server-oss-not-support-tip')}',
+                              trailing: Switch(
+                                value: bind.mainGetOptionSync(
+                                        key: kOptionDisableUdp) ==
+                                    'Y',
+                                onChanged:
+                                    locked || isOptionFixed(kOptionDisableUdp)
+                                        ? null
+                                        : (value) async {
+                                            await bind.mainSetOption(
+                                                key: kOptionDisableUdp,
+                                                value: value ? 'Y' : 'N');
+                                            setState(() {});
+                                          },
+                              ),
+                            ),
+                        ],
+                      );
+                    }
+                  },
+                ),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
 
@@ -2310,6 +2381,22 @@ class _AboutState extends State<_About> {
                 SelectionArea(
                     child: Text('${translate('Fingerprint')}: $fingerprint')
                         .marginSymmetric(vertical: 4.0)),
+              InkWell(
+                  onTap: () {
+                    launchUrlString('https://rustdesk.com/privacy.html');
+                  },
+                  child: Text(
+                    translate('Privacy Statement'),
+                    style: linkStyle,
+                  ).marginSymmetric(vertical: 4.0)),
+              InkWell(
+                  onTap: () {
+                    launchUrlString('https://rustdesk.com');
+                  },
+                  child: Text(
+                    translate('Website'),
+                    style: linkStyle,
+                  ).marginSymmetric(vertical: 4.0)),
               Container(
                 decoration: const BoxDecoration(color: Color(0xFF2c8cff)),
                 padding:
