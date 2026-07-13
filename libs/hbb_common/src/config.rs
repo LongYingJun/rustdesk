@@ -117,8 +117,10 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rs-ny.rustdesk.com"];
-pub const RS_PUB_KEY: &str = "OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=";
+pub const RENDEZVOUS_SERVERS: &[&str] = &["106.75.132.194"];
+//pub const RENDEZVOUS_SERVERS: &[&str] = &["10.1.2.254"];//easytier
+pub const RS_PUB_KEY: &str = "td296sNXfTjkfGnCXaodCqPLQt76LgoVFqam4LcjdNI=";
+//pub const RS_PUB_KEY: &str = "VYOwRQzrjY9v5GYP8FtSUkyuubhYMYARskQmOT0KFO4=";//easytier
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
@@ -493,6 +495,11 @@ impl Config2 {
     fn load() -> Config2 {
         let mut config = Config::load_::<Config2>("2");
         let mut store = false;
+		//允许允许IP直接访问 默认打勾
+		if !config.options.contains_key("direct-server") {
+            	config.options.insert("direct-server".to_string(), "Y".to_string());
+            	store = true;
+        	}
         if let Some(mut socks) = config.socks {
             let (password, _, store2) =
                 decrypt_str_or_original(&socks.password, PASSWORD_ENC_VERSION);
@@ -2143,7 +2150,33 @@ pub struct LocalConfig {
 
 impl LocalConfig {
     fn load() -> LocalConfig {
-        Config::load_::<LocalConfig>("_local")
+        //Config::load_::<LocalConfig>("_local")
+		let mut config = Config::load_::<LocalConfig>("_local");
+		let mut store = false;
+		//启用 IPv6 P2P 连接 默认打勾
+		    if !config.options.contains_key("enable-ipv6-punch") {
+            	config.options.insert("enable-ipv6-punch".to_string(), "Y".to_string());
+            	store = true;
+        	}
+		//启动时检查软件更新 默认去勾
+		    if !config.options.contains_key("enable-check-update") {
+		        config.options.insert("enable-check-update".to_string(), "N".to_string());
+		        store = true;
+		    }
+		//启用UDP打洞 默认打勾
+        	if !config.options.contains_key("enable-udp-punch") {
+            	config.options.insert("enable-udp-punch".to_string(), "Y".to_string());
+            	store = true;
+        	}
+		//将设置里的 安全-允许远程修改配置 默认打勾
+        	if !config.options.contains_key("allow-remote-config-modification") {
+            	config.options.insert("allow-remote-config-modification".to_string(), "Y".to_string());
+            	store = true;
+        	}
+		if store {
+            	config.store();
+        	}
+		config
     }
 
     fn store(&self) {
