@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Рэтрансляванае падключэнне"),
         ("Secure Connection", "Бяспечнае падключэнне"),
         ("Insecure Connection", "Нябяспечнае падключэнне"),
+        ("Continue", ""),
         ("Scale original", "Арыгінальны маштаб"),
         ("Scale adaptive", "Адаптыўны маштаб"),
         ("General", "Агульныя"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Скінуць выбар уводу з клавіятуры"),
         ("remember-wayland-keyboard-choice-tip", "Не пытацца зноў для гэтага аддаленага кампутара"),
         ("Why this happens", "Чаму гэта адбываецца"),
+        ("Switch display", "Пераключыць дысплэй"),
+        ("Show monitor switch button on the main toolbar", "Паказваць кнопку пераключэння манітора на галоўнай панэлі інструментаў"),
+        ("Show on the minimized toolbar", "Паказваць на згорнутай панэлі інструментаў"),
+        ("All monitors", "Усе манітори"),
+        ("#{} monitor", "Манітор {}"),
+        ("conn-e2ee-unavailable-tip", "Не ўдалося праверыць скразное шыфраванне.\nАддаленая прылада, магчыма, яшчэ наладжваецца. Паспрабуйце пазней.\nКалі гэта будзе паўтарацца, сервер можа быць ненадзейным.\nУсё роўна працягнуць?"),
     ].iter().cloned().collect();
 }

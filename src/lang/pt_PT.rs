@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Conexão de relé"),
         ("Secure Connection", "Conexão segura"),
         ("Insecure Connection", "Conexão insegura"),
+        ("Continue", ""),
         ("Scale original", "Escala original"),
         ("Scale adaptive", "Escala adaptável"),
         ("General", "Geral"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Repor escolha de entrada de teclado"),
         ("remember-wayland-keyboard-choice-tip", "Não voltar a perguntar para este computador remoto"),
         ("Why this happens", "Porque é que isto acontece"),
+        ("Switch display", "Trocar de ecrã"),
+        ("Show monitor switch button on the main toolbar", "Mostrar o botão de troca de monitor na barra de ferramentas principal"),
+        ("Show on the minimized toolbar", "Mostrar na barra de ferramentas minimizada"),
+        ("All monitors", "Todos os monitores"),
+        ("#{} monitor", "Monitor {}"),
+        ("conn-e2ee-unavailable-tip", "Não foi possível verificar a encriptação de ponta a ponta.\nO dispositivo remoto ainda pode estar a ser configurado. Tente novamente mais tarde.\nSe isto continuar a acontecer, o servidor pode não ser fidedigno.\nContinuar mesmo assim?"),
     ].iter().cloned().collect();
 }

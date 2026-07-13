@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Połączenie przez bramkę"),
         ("Secure Connection", "Połączenie szyfrowane"),
         ("Insecure Connection", "Połączenie nieszyfrowane"),
+        ("Continue", ""),
         ("Scale original", "Skalowanie oryginalne"),
         ("Scale adaptive", "Dopasuj do wyświetlacza"),
         ("General", "Ogólne"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Zresetuj wybór dotyczący wprowadzania z klawiatury"),
         ("remember-wayland-keyboard-choice-tip", "Nie pytaj ponownie dla tego zdalnego komputera"),
         ("Why this happens", "Dlaczego tak się dzieje"),
+        ("Switch display", "Przełącz ekran"),
+        ("Show monitor switch button on the main toolbar", "Pokaż przycisk przełączania monitora na głównym pasku narzędzi"),
+        ("Show on the minimized toolbar", "Pokaż na zminimalizowanym pasku narzędzi"),
+        ("All monitors", "Wszystkie ekrany"),
+        ("#{} monitor", "Ekran {}"),
+        ("conn-e2ee-unavailable-tip", "Nie można zweryfikować szyfrowania end-to-end.\nUrządzenie zdalne może nadal się konfigurować. Spróbuj ponownie później.\nJeśli problem będzie się powtarzał, serwer może być niezaufany.\nKontynuować mimo to?"),
     ].iter().cloned().collect();
 }

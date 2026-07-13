@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Posredovana povezava"),
         ("Secure Connection", "Zavarovana povezava"),
         ("Insecure Connection", "Nezavarovana povezava"),
+        ("Continue", ""),
         ("Scale original", "Originalna velikost"),
         ("Scale adaptive", "Prilagojena velikost"),
         ("General", "Splošno"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Ponastavi izbiro vnosa s tipkovnice"),
         ("remember-wayland-keyboard-choice-tip", "Za ta oddaljeni računalnik ne vprašaj več"),
         ("Why this happens", "Zakaj se to dogaja"),
+        ("Switch display", "Preklopi zaslon"),
+        ("Show monitor switch button on the main toolbar", "Pokaži gumb za preklop monitorja v glavni orodni vrstici"),
+        ("Show on the minimized toolbar", "Pokaži v pomanjšani orodni vrstici"),
+        ("All monitors", "Vsi zasloni"),
+        ("#{} monitor", "Zaslon {}"),
+        ("conn-e2ee-unavailable-tip", "Šifriranja od konca do konca ni bilo mogoče preveriti.\nOddaljena naprava se morda še nastavlja. Poskusite znova pozneje.\nČe se to še naprej dogaja, strežnik morda ni zaupanja vreden.\nVseeno nadaljevati?"),
     ].iter().cloned().collect();
 }

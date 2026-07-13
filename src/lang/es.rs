@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Conexión Relay"),
         ("Secure Connection", "Conexión segura"),
         ("Insecure Connection", "Conexión insegura"),
+        ("Continue", ""),
         ("Scale original", "Escala original"),
         ("Scale adaptive", "Escala adaptativa"),
         ("General", "General"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Restablecer la opción de entrada del teclado"),
         ("remember-wayland-keyboard-choice-tip", "No volver a preguntar para este equipo remoto"),
         ("Why this happens", "Por qué ocurre esto"),
+        ("Switch display", "Cambiar de pantalla"),
+        ("Show monitor switch button on the main toolbar", "Mostrar el botón de cambio de monitor en la barra de herramientas principal"),
+        ("Show on the minimized toolbar", "Mostrar en la barra de herramientas minimizada"),
+        ("All monitors", "Todos los monitores"),
+        ("#{} monitor", "Monitor {}"),
+        ("conn-e2ee-unavailable-tip", "No se pudo verificar el cifrado de extremo a extremo.\nEs posible que el dispositivo remoto aún se esté configurando. Inténtelo de nuevo más tarde.\nSi esto sigue ocurriendo, es posible que el servidor no sea de confianza.\n¿Continuar de todos modos?"),
     ].iter().cloned().collect();
 }

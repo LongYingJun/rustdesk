@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "რეტრანსლირებული კავშირი"),
         ("Secure Connection", "უსაფრთხო კავშირი"),
         ("Insecure Connection", "არაუსაფრთხო კავშირი"),
+        ("Continue", ""),
         ("Scale original", "ორიგინალური მასშტაბი"),
         ("Scale adaptive", "ადაპტირებადი მასშტაბი"),
         ("General", "ზოგადი"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "კლავიატურის შეყვანის არჩევანის ჩამოყრა"),
         ("remember-wayland-keyboard-choice-tip", "აღარ მკითხო ამ დისტანციური კომპიუტერისთვის"),
         ("Why this happens", "რატომ ხდება ეს"),
+        ("Switch display", "ეკრანის გადართვა"),
+        ("Show monitor switch button on the main toolbar", "მონიტორის გადართვის ღილაკის ჩვენება მთავარ ხელსაწყოთა ზოლზე"),
+        ("Show on the minimized toolbar", "ჩვენება ჩაკეცილ ხელსაწყოთა ზოლზე"),
+        ("All monitors", "ყველა მონიტორი"),
+        ("#{} monitor", "მონიტორი {}"),
+        ("conn-e2ee-unavailable-tip", "ბოლომდე დაშიფვრის გადამოწმება ვერ მოხერხდა.\nდისტანციური მოწყობილობა შესაძლოა ჯერ კიდევ მზადდება. სცადეთ მოგვიანებით.\nთუ ეს კვლავ გაგრძელდება, სერვერი შესაძლოა არასანდო იყოს.\nმაინც გააგრძელებთ?"),
     ].iter().cloned().collect();
 }

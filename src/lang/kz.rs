@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Релай Қосылым"),
         ("Secure Connection", "Қауіпсіз Қосылым"),
         ("Insecure Connection", "Қатерлі Қосылым"),
+        ("Continue", ""),
         ("Scale original", "Scale original"),
         ("Scale adaptive", "Scale adaptive"),
         ("General", "Жалпы"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Пернетақта еңгізу таңдауын қалпына келтіру"),
         ("remember-wayland-keyboard-choice-tip", "Осы қашықтағы компьютер үшін қайта сұрамау"),
         ("Why this happens", "Бұл неге болады"),
+        ("Switch display", "Дисплейді ауыстыру"),
+        ("Show monitor switch button on the main toolbar", "Негізгі құралдар тақтасында мониторды ауыстыру түймесін көрсету"),
+        ("Show on the minimized toolbar", "Кішірейтілген құралдар тақтасында көрсету"),
+        ("All monitors", "Барлық мониторлар"),
+        ("#{} monitor", "Монитор {}"),
+        ("conn-e2ee-unavailable-tip", "Ұштан-ұшқа шифрлауды тексеру мүмкін болмады.\nҚашықтағы құрылғы әлі бапталып жатқан болуы мүмкін. Кейінірек қайталап көріңіз.\nЕгер бұл қайталана берсе, сервер сенімсіз болуы мүмкін.\nСонда да жалғастыру керек пе?"),
     ].iter().cloned().collect();
 }

@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Releja savienojums"),
         ("Secure Connection", "Drošs savienojums"),
         ("Insecure Connection", "Nedrošs savienojums"),
+        ("Continue", ""),
         ("Scale original", "Mērogs oriģināls"),
         ("Scale adaptive", "Mērogs adaptīvs"),
         ("General", "Vispārīgi"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Atiestatīt tastatūras ievades izvēli"),
         ("remember-wayland-keyboard-choice-tip", "Vairs nejautāt par šo attālo datoru"),
         ("Why this happens", "Kāpēc tas notiek"),
+        ("Switch display", "Pārslēgt displeju"),
+        ("Show monitor switch button on the main toolbar", "Rādīt monitora pārslēgšanas pogu galvenajā rīkjoslā"),
+        ("Show on the minimized toolbar", "Rādīt minimizētajā rīkjoslā"),
+        ("All monitors", "Visi monitori"),
+        ("#{} monitor", "Monitors {}"),
+        ("conn-e2ee-unavailable-tip", "Neizdevās pārbaudīt pilnīgu šifrēšanu.\nAttālā ierīce, iespējams, vēl tiek iestatīta. Mēģiniet vēlreiz vēlāk.\nJa tas turpinās, serveris var nebūt uzticams.\nVai tomēr turpināt?"),
     ].iter().cloned().collect();
 }

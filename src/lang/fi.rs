@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Välitetty yhteys"),
         ("Secure Connection", "Suojattu yhteys"),
         ("Insecure Connection", "Suojaamaton yhteys"),
+        ("Continue", ""),
         ("Scale original", "Skaalaa alkuperäinen"),
         ("Scale adaptive", "Mukautuva skaalaus"),
         ("General", "Yleiset"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Nollaa näppäimistösyötteen valinta"),
         ("remember-wayland-keyboard-choice-tip", "Älä kysy uudelleen tältä etätietokoneelta"),
         ("Why this happens", "Miksi näin tapahtuu"),
+        ("Switch display", "Vaihda näyttöä"),
+        ("Show monitor switch button on the main toolbar", "Näytä näytön vaihtopainike päätyökalurivillä"),
+        ("Show on the minimized toolbar", "Näytä pienennetyssä työkalurivissä"),
+        ("All monitors", "Kaikki näytöt"),
+        ("#{} monitor", "Näyttö {}"),
+        ("conn-e2ee-unavailable-tip", "Päästä päähän -salausta ei voitu vahvistaa.\nEtälaite voi olla vielä määritettävänä. Yritä myöhemmin uudelleen.\nJos tämä jatkuu, palvelin ei ehkä ole luotettava.\nJatketaanko silti?"),
     ].iter().cloned().collect();
 }

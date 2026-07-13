@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Conexiune prin retransmisie"),
         ("Secure Connection", "Conexiune securizată"),
         ("Insecure Connection", "Conexiune nesecurizată"),
+        ("Continue", ""),
         ("Scale original", "Dimensiune originală"),
         ("Scale adaptive", "Scalare automată"),
         ("General", "General"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Resetează alegerea pentru introducerea de la tastatură"),
         ("remember-wayland-keyboard-choice-tip", "Nu mai întreba pentru acest computer la distanță"),
         ("Why this happens", "De ce se întâmplă acest lucru"),
+        ("Switch display", "Comută afișajul"),
+        ("Show monitor switch button on the main toolbar", "Afișează butonul de comutare a monitorului în bara de instrumente principală"),
+        ("Show on the minimized toolbar", "Afișează în bara de instrumente minimizată"),
+        ("All monitors", "Toate monitoarele"),
+        ("#{} monitor", "Monitor {}"),
+        ("conn-e2ee-unavailable-tip", "Criptarea end-to-end nu a putut fi verificată.\nDispozitivul la distanță poate fi încă în curs de configurare. Încercați din nou mai târziu.\nDacă acest lucru continuă, serverul poate să nu fie de încredere.\nContinuați oricum?"),
     ].iter().cloned().collect();
 }

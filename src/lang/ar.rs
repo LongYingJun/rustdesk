@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "اتصال الوسيط"),
         ("Secure Connection", "اتصال آمن"),
         ("Insecure Connection", "اتصال غير آمن"),
+        ("Continue", ""),
         ("Scale original", "المقياس الأصلي"),
         ("Scale adaptive", "مقياس التكيف"),
         ("General", "عام"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "إعادة تعيين اختيار إدخال لوحة المفاتيح"),
         ("remember-wayland-keyboard-choice-tip", "لا تسأل مرة أخرى لهذا الكمبيوتر البعيد"),
         ("Why this happens", "سبب حدوث ذلك"),
+        ("Switch display", "تبديل الشاشة"),
+        ("Show monitor switch button on the main toolbar", "إظهار زر تبديل الشاشة على شريط الأدوات الرئيسي"),
+        ("Show on the minimized toolbar", "الإظهار على شريط الأدوات المُصغّر"),
+        ("All monitors", "جميع الشاشات"),
+        ("#{} monitor", "الشاشة رقم {}"),
+        ("conn-e2ee-unavailable-tip", "تعذر التحقق من التشفير من طرف إلى طرف.\nقد يكون الجهاز البعيد ما يزال قيد الإعداد. حاول مرة أخرى لاحقًا.\nإذا استمر حدوث ذلك، فقد يكون الخادم غير موثوق به.\nهل تريد المتابعة على أي حال؟"),
     ].iter().cloned().collect();
 }

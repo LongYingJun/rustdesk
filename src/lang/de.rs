@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Relay-Verbindung"),
         ("Secure Connection", "Sichere Verbindung"),
         ("Insecure Connection", "Unsichere Verbindung"),
+        ("Continue", ""),
         ("Scale original", "Keine Skalierung"),
         ("Scale adaptive", "Anpassbare Skalierung"),
         ("General", "Allgemein"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Auswahl der Tastatureingabe zurücksetzen"),
         ("remember-wayland-keyboard-choice-tip", "Für diesen entfernten Computer nicht erneut fragen"),
         ("Why this happens", "Warum dies passiert"),
+        ("Switch display", "Anzeige wechseln"),
+        ("Show monitor switch button on the main toolbar", "Schaltfläche zum Monitorwechsel in der Haupt-Symbolleiste anzeigen"),
+        ("Show on the minimized toolbar", "In der minimierten Symbolleiste anzeigen"),
+        ("All monitors", "Alle Bildschirme"),
+        ("#{} monitor", "Bildschirm {}"),
+        ("conn-e2ee-unavailable-tip", "Ende-zu-Ende-Verschlüsselung konnte nicht verifiziert werden.\nDas entfernte Gerät wird möglicherweise noch eingerichtet. Versuchen Sie es später erneut.\nWenn dies weiterhin auftritt, ist der Server möglicherweise nicht vertrauenswürdig.\nTrotzdem fortfahren?"),
     ].iter().cloned().collect();
 }

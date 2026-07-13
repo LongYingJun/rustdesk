@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "റിലേ കണക്ഷൻ"),
         ("Secure Connection", "സുരക്ഷിതമായ കണക്ഷൻ"),
         ("Insecure Connection", "സുരക്ഷിതമല്ലാത്ത കണക്ഷൻ"),
+        ("Continue", ""),
         ("Scale original", "ഒറിജിനൽ വലിപ്പം"),
         ("Scale adaptive", "അഡാപ്റ്റീവ് വലിപ്പം"),
         ("General", "പൊതുവായവ"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "കീബോർഡ് ഇൻപുട്ട് തിരഞ്ഞെടുപ്പ് റീസെറ്റ് ചെയ്യുക"),
         ("remember-wayland-keyboard-choice-tip", "ഈ റിമോട്ട് കമ്പ്യൂട്ടറിനായി ഇനി ചോദിക്കരുത്"),
         ("Why this happens", "ഇത് എന്തുകൊണ്ട് സംഭവിക്കുന്നു"),
+        ("Switch display", "ഡിസ്പ്ലേ മാറ്റുക"),
+        ("Show monitor switch button on the main toolbar", "പ്രധാന ടൂൾബാറിൽ മോണിറ്റർ സ്വിച്ച് ബട്ടൺ കാണിക്കുക"),
+        ("Show on the minimized toolbar", "ചെറുതാക്കിയ ടൂൾബാറിൽ കാണിക്കുക"),
+        ("All monitors", "എല്ലാ മോണിറ്ററുകളും"),
+        ("#{} monitor", "മോണിറ്റർ {}"),
+        ("conn-e2ee-unavailable-tip", "എൻഡ്-ടു-എൻഡ് എൻക്രിപ്ഷൻ പരിശോധിക്കാൻ കഴിഞ്ഞില്ല.\nദൂരസ്ഥ ഉപകരണം ഇനിയും സജ്ജീകരണത്തിലായിരിക്കാം. പിന്നീട് വീണ്ടും ശ്രമിക്കുക.\nഇത് തുടർന്നാൽ സർവർ വിശ്വസനീയമല്ലായിരിക്കാം.\nഎങ്കിലും തുടരണമോ?"),
     ].iter().cloned().collect();
 }

@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Koneksi Relay"),
         ("Secure Connection", "Koneksi aman"),
         ("Insecure Connection", "Koneksi Tidak Aman"),
+        ("Continue", ""),
         ("Scale original", "Skala asli"),
         ("Scale adaptive", "Skala adaptif"),
         ("General", "Umum"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Setel ulang pilihan masukan keyboard"),
         ("remember-wayland-keyboard-choice-tip", "Jangan tanya lagi untuk komputer jarak jauh ini"),
         ("Why this happens", "Mengapa ini terjadi"),
+        ("Switch display", "Ganti tampilan"),
+        ("Show monitor switch button on the main toolbar", "Tampilkan tombol pengalih monitor di bilah alat utama"),
+        ("Show on the minimized toolbar", "Tampilkan di bilah alat yang diperkecil"),
+        ("All monitors", "Semua monitor"),
+        ("#{} monitor", "Monitor {}"),
+        ("conn-e2ee-unavailable-tip", "Tidak dapat memverifikasi enkripsi ujung ke ujung.\nPerangkat jarak jauh mungkin masih disiapkan. Coba lagi nanti.\nJika ini terus terjadi, server mungkin tidak tepercaya.\nTetap lanjutkan?"),
     ].iter().cloned().collect();
 }

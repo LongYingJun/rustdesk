@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Posredna konekcija"),
         ("Secure Connection", "Bezbedna konekcija"),
         ("Insecure Connection", "Nebezbedna konekcija"),
+        ("Continue", ""),
         ("Scale original", "Skaliraj original"),
         ("Scale adaptive", "Adaptivno skaliranje"),
         ("General", "Uopšteno"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Resetuj izbor unosa sa tastature"),
         ("remember-wayland-keyboard-choice-tip", "Ne pitaj ponovo za ovaj udaljeni računar"),
         ("Why this happens", "Zašto se ovo dešava"),
+        ("Switch display", "Промени екран"),
+        ("Show monitor switch button on the main toolbar", "Прикажи дугме за пребацивање монитора на главној траци са алаткама"),
+        ("Show on the minimized toolbar", "Прикажи на умањеној траци са алаткама"),
+        ("All monitors", "Svi monitori"),
+        ("#{} monitor", "Monitor {}"),
+        ("conn-e2ee-unavailable-tip", "Није могуће проверити енд-то-енд шифровање.\nУдаљени уређај се можда још подешава. Покушајте поново касније.\nАко се ово настави, сервер можда није поуздан.\nНаставити свеједно?"),
     ].iter().cloned().collect();
 }

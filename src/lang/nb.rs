@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Viderekoblet tilkobling"),
         ("Secure Connection", "Sikker tilkobling"),
         ("Insecure Connection", "Usikker tilkobling"),
+        ("Continue", ""),
         ("Scale original", "Original skalering"),
         ("Scale adaptive", "Adaptiv skalering"),
         ("General", "Generelt"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Tilbakestill valg for tastaturinndata"),
         ("remember-wayland-keyboard-choice-tip", "Ikke spør igjen for denne eksterne datamaskinen"),
         ("Why this happens", "Hvorfor dette skjer"),
+        ("Switch display", "Bytt skjerm"),
+        ("Show monitor switch button on the main toolbar", "Vis knapp for skjermbytte på hovedverktøylinjen"),
+        ("Show on the minimized toolbar", "Vis på den minimerte verktøylinjen"),
+        ("All monitors", "Alle skjermer"),
+        ("#{} monitor", "Skjerm {}"),
+        ("conn-e2ee-unavailable-tip", "Ende-til-ende-kryptering kunne ikke verifiseres.\nDen eksterne enheten kan fortsatt være under oppsett. Prøv igjen senere.\nHvis dette fortsetter, kan serveren være upålitelig.\nFortsette likevel?"),
     ].iter().cloned().collect();
 }

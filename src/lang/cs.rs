@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "Připojení předávací server"),
         ("Secure Connection", "Zabezpečené připojení"),
         ("Insecure Connection", "Nezabezpečené připojení"),
+        ("Continue", ""),
         ("Scale original", "Originální měřítko"),
         ("Scale adaptive", "Adaptivní měřítko"),
         ("General", "Obecné"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "Resetovat volbu vstupu z klávesnice"),
         ("remember-wayland-keyboard-choice-tip", "Pro tento vzdálený počítač se již neptat"),
         ("Why this happens", "Proč k tomu dochází"),
+        ("Switch display", "Přepnout obrazovku"),
+        ("Show monitor switch button on the main toolbar", "Zobrazit tlačítko přepnutí monitoru na hlavním panelu nástrojů"),
+        ("Show on the minimized toolbar", "Zobrazit na minimalizovaném panelu nástrojů"),
+        ("All monitors", "Všechny monitory"),
+        ("#{} monitor", "Monitor č. {}"),
+        ("conn-e2ee-unavailable-tip", "Nepodařilo se ověřit koncové šifrování.\nVzdálené zařízení se možná stále nastavuje. Zkuste to znovu později.\nPokud se to bude opakovat, server nemusí být důvěryhodný.\nPřesto pokračovat?"),
     ].iter().cloned().collect();
 }

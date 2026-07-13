@@ -711,7 +711,6 @@ pub fn is_can_input_monitoring(_prompt: bool) -> bool {
 
 #[inline]
 pub fn get_error() -> String {
-    #[cfg(not(any(feature = "cli")))]
     #[cfg(target_os = "linux")]
     {
         let dtype = crate::platform::linux::get_display_server();
@@ -902,8 +901,10 @@ pub fn get_async_job_status() -> String {
 #[inline]
 pub fn get_langs() -> String {
     use serde_json::json;
+    let hide_cjk = crate::lang::cjk_ui_unavailable();
     let mut x: Vec<(&str, String)> = crate::lang::LANGS
         .iter()
+        .filter(|a| !hide_cjk || !crate::lang::is_cjk_lang(a.0))
         .map(|a| (a.0, format!("{} ({})", a.1, a.0)))
         .collect();
     x.sort_by(|a, b| a.0.cmp(b.0));

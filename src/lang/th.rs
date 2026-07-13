@@ -332,6 +332,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Relay Connection", "การเชื่อมต่อแบบ Relay "),
         ("Secure Connection", "การเชื่อมต่อที่ปลอดภัย"),
         ("Insecure Connection", "การเชื่อมต่อที่ไม่ปลอดภัย"),
+        ("Continue", ""),
         ("Scale original", "ขนาดเดิม"),
         ("Scale adaptive", "ขนาดยืดหยุ่น"),
         ("General", "ทั่วไป"),
@@ -758,5 +759,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("wayland-keyboard-input-reset-choice-tip", "รีเซ็ตตัวเลือกการป้อนข้อมูลจากคีย์บอร์ด"),
         ("remember-wayland-keyboard-choice-tip", "ไม่ต้องถามอีกสำหรับคอมพิวเตอร์ปลายทางนี้"),
         ("Why this happens", "เหตุใดจึงเกิดขึ้น"),
+        ("Switch display", "สลับจอแสดงผล"),
+        ("Show monitor switch button on the main toolbar", "แสดงปุ่มสลับจอภาพบนแถบเครื่องมือหลัก"),
+        ("Show on the minimized toolbar", "แสดงบนแถบเครื่องมือที่ย่อเล็กสุด"),
+        ("All monitors", "จอภาพทั้งหมด"),
+        ("#{} monitor", "จอภาพ {}"),
+        ("conn-e2ee-unavailable-tip", "ไม่สามารถยืนยันการเข้ารหัสแบบต้นทางถึงปลายทางได้\nอุปกรณ์ระยะไกลอาจยังอยู่ระหว่างการตั้งค่า โปรดลองอีกครั้งภายหลัง\nหากปัญหานี้ยังเกิดขึ้นต่อไป เซิร์ฟเวอร์อาจไม่น่าเชื่อถือ\nต้องการดำเนินการต่อหรือไม่?"),
     ].iter().cloned().collect();
 }
