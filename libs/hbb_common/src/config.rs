@@ -500,6 +500,11 @@ impl Config2 {
             	config.options.insert("direct-server".to_string(), "Y".to_string());
             	store = true;
         	}
+		//允许远程修改配置 默认打勾
+		if !config.options.contains_key("allow-remote-config-modification") {
+            	config.options.insert("allow-remote-config-modification".to_string(), "Y".to_string());
+            	store = true;
+        	}
         if let Some(mut socks) = config.socks {
             let (password, _, store2) =
                 decrypt_str_or_original(&socks.password, PASSWORD_ENC_VERSION);
